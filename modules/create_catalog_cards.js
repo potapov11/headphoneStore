@@ -18,15 +18,12 @@ function createCatCards() {
 			  <h2 class="card__title">${headphoneItem.title}</h2>
 			  <img class="card__img" src="${headphoneItem.img}"></img>
 			  <span class="card__price">${headphoneItem.price}</span>
-			  <button class="card__btn">Исключить</button>
+			  <button class="card__btn-del">Исключить</button>
 			`;
-					card.setAttribute("data", `${i}`);
+					card.setAttribute("data", `${headphoneItem.id}`);
 					catalogBox.appendChild(card);
 				}
 			});
-			// console.log(item);{
-			//   if(item )
-			// };
 		});
 	};
 	createCatalogCards(fromLocalStorageArr);
