@@ -4,16 +4,15 @@
 	margin: 0;
 }
 
-body {
+.body {
 	background-color: gainsboro;
 	font-family: sans-serif;
 }
 
 .container {
-	width: 1300px;
+	width: 1109px;
 	margin: 0 auto;
 	margin-top: 20px;
-	border: 2px solid goldenrod;
 }
 
 .header {
@@ -23,15 +22,23 @@ body {
 
 .card {
 	display: flex;
-	width: 300px;
-	height: 400px;
+	flex-direction: column;
+	width: 350px;
+	height: 407px;
 	padding: 10px;
 	margin-right: 10px;
 	margin-bottom: 20px;
-	flex-direction: column;
-	border: 2px solid gray;
 	border-radius: 5px;
 	text-align: center;
+	border-radius: 30px;
+	background: #fff;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card__inner-info {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
 }
 
 .card__title {
@@ -52,5 +59,4 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	padding: 20px;
 }

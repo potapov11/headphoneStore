@@ -6,10 +6,13 @@ const createCards = () => {
 		const card = document.createElement("div");
 		card.classList.add("card");
 		card.innerHTML = `
-      <h2 class="card__title">${item.title}</h2>
-      <img class="card__img" src="${item.img}"></img>
-      <span class="card__price">${item.price}</span>
-      <button class="card__btn">Купить</button>
+			<img class="card__img" src="${item.img}"></img>
+			<div class="card__inner-info">
+				<h2 class="card__title">${item.title}</h2>
+				<span class="card__price">${item.price}</span>
+				<span class="card__rating">${item.rating}</span>
+				<button class="card__btn" type="button">Купить</button>
+			</div>
     `;
 		card.setAttribute("data", `${i}`);
 		hedphonesBox.appendChild(card);

@@ -15,10 +15,10 @@ function createCatCards() {
 					const card = document.createElement("div");
 					card.classList.add("card");
 					card.innerHTML = `
-			  <h2 class="card__title">${headphoneItem.title}</h2>
-			  <img class="card__img" src="${headphoneItem.img}"></img>
-			  <span class="card__price">${headphoneItem.price}</span>
-			  <button class="card__btn-del">Исключить</button>
+						<h2 class="card__title">${headphoneItem.title}</h2>
+						<img class="card__img" src="${headphoneItem.img}"></img>
+						<span class="card__price">${headphoneItem.price}</span>
+						<button class="card__btn-del">Исключить</button>
 			`;
 					card.setAttribute("data", `${headphoneItem.id}`);
 					catalogBox.appendChild(card);
