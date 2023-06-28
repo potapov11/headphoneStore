@@ -12,4 +12,9 @@
 // });
 
 import { toLocal } from "./modules/to_local_storage.js";
+// import { fromLocal } from "./modules/from_local_storage.js";
+// import { createCatalogCards } from "./modules/create_catalog_cards.js";
 toLocal();
+// const fromLocalStorageArr = fromLocal();
+// console.log(fromLocalStorageArr);
+// createCatalogCards();

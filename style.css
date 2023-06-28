@@ -47,7 +47,8 @@ body {
 	cursor: pointer;
 }
 
-.box {
+.box,
+.catalog_box {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
