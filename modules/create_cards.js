@@ -8,8 +8,8 @@ const createCards = () => {
 		card.innerHTML = `
 			<img class="card__img" src="${item.img}"></img>
 			<div class="card__inner-info">
-				<h2 class="card__title">${item.title}</h2>
-				<span class="card__price">${item.price}</span>
+				<p class="card__title">${item.title}</p>
+				<span class="card__price">${item.price} &#x20bd</span>
 				<span class="card__rating">${item.rating}</span>
 				<button class="card__btn" type="button">Купить</button>
 			</div>
