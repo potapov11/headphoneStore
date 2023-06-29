@@ -42,7 +42,7 @@ const headphones = [
 		id: 5,
 	},
 	{
-		title: "BOROFONE BO4",
+		title: "Borofone BO4",
 		img: "images/image-6.png",
 		price: 3700,
 		rating: 4.7,
@@ -67,6 +67,20 @@ const headphones = [
 		img: "images/image-9.jpg",
 		price: 3700,
 		rating: 4.1,
+		id: 6,
+	},
+	{
+		title: "Apple EarPods",
+		img: "images/image-5.png",
+		price: 5350,
+		rating: 4.1,
+		id: 5,
+	},
+	{
+		title: "Borofone BO4",
+		img: "images/image-6.png",
+		price: 3700,
+		rating: 4.7,
 		id: 6,
 	},
 ];
