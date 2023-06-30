@@ -33,7 +33,8 @@
 	text-decoration: none;
 }
 
-.header__shop-span {
+.header__shop-span,
+.header__shop-icon {
 	position: absolute;
 	display: inline-block;
 	top: -6px;

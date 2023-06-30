@@ -11,7 +11,6 @@ cards.forEach((cardItem, i) => {
 	cardItem.addEventListener("click", (e) => {
 		if (e.target.tagName === "BUTTON") {
 			console.log("button");
-
 			const dataValue = cardItem.getAttribute("data");
 			console.log(typeof dataValue);
 			const index = toLocalArr.findIndex((item) => item === dataValue);
@@ -26,14 +25,11 @@ cards.forEach((cardItem, i) => {
 	});
 });
 
-let data = [1, 5, "home", true, 5];
-
-data = data.map((item) => {
-	if (typeof item === "number") {
-		return item * 3;
-	} else {
-		return item + " - done";
-	}
-});
-
-console.log(data);
+const shopIcon = document.querySelector(".header__shop-icon");
+console.log(shopIcon);
+let newArr = Array.from(localStorage.getItem("toLocalArr"));
+if (newArr) {
+	newArr = newArr.filter((item) => item !== ",");
+	shopIcon.classList.remove("none");
+	shopIcon.textContent = newArr.length;
+}
