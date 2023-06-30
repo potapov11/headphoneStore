@@ -3,11 +3,6 @@ const shopIcon = document.querySelector(".header__shop-icon");
 let totalPrice = document.querySelector(".total__price");
 
 createCatCards();
-// const prices = document.querySelectorAll(".main-catalog__price");
-// prices.forEach((item) => {
-// 	item = Number(item.textContent);
-// 	totalPrice.textContent += item;
-// });
 
 const prices = document.querySelectorAll(".main-catalog__price");
 const price = Array.from(prices).reduce((total, item) => {
