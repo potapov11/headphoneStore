@@ -18,11 +18,10 @@ function createCatCards() {
 						<img class="main-catalog__img" src="${headphoneItem.img}"></img>
 						<div class = 'main-catalog__card-inner'>
 							<p class="main-catalog__title">${headphoneItem.title}</p>
-							<span class="main-catalog__price">&#x20bd ${headphoneItem.price}</span>
 						</div>
 						<div class = 'main-catalog__card-bottom'>
 							<span class="main-catalog__num">1wefwe</span>							
-							<span class="main-catalog__price">&#x20bd ${headphoneItem.price}</span>
+							<span class="main-catalog__price"> ${headphoneItem.price}</span>
 						</div>
 						<button class="main-catalog__btn-del">Исключить</button>
 				`;
