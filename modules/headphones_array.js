@@ -50,7 +50,7 @@ const headphones = [
 	},
 	{
 		title: "GERLAX GH-04",
-		img: "images/image-7.png",
+		img: "images/image-7.jpg",
 		price: 3700,
 		rating: 4.7,
 		id: 6,
