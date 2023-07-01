@@ -8,14 +8,14 @@ const headphones = [
 	},
 	{
 		title: "Apple EarPods",
-		img: "images/image-1.png",
+		img: "images/image-1.PNG",
 		price: 2700,
 		rating: 4.7,
 		id: 1,
 	},
 	{
 		title: "Apple BYZ S852I",
-		img: "images/image-2.png",
+		img: "images/image-2.PNG",
 		price: 3300,
 		rating: 4.4,
 		id: 2,
