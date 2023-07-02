@@ -11,7 +11,7 @@
 
 .container {
 	width: 1109px;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	margin-top: 20px;
 }
 
@@ -55,8 +55,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 350px;
-	height: 407px;
+	/* width: 350px; */
+	width: 250px;
+	height: 307px;
+	/* height: 407px; */
 	padding: 15px 20px 30px;
 	margin-right: 10px;
 	margin-bottom: 20px;
@@ -85,8 +87,10 @@
 
 .card__img {
 	margin-bottom: 20px;
-	width: 219px;
-	height: 240px;
+	width: 119px;
+	/* width: 219px;
+	height: 240px; */
+	height: 140px;
 }
 
 .card__btn {

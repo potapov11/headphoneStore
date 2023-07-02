@@ -14,6 +14,7 @@ const toLocal = () => {
 	}
 
 	console.log(toLocalArr);
+	console.log(typeof toLocalArr);
 
 	btns.forEach((item, i) => {
 		item.addEventListener("click", () => {
@@ -21,11 +22,15 @@ const toLocal = () => {
 			toLocalArr.push(i);
 			console.log(toLocalArr.length);
 			console.log(toLocalArr);
-			localStorage.setItem("toLocalArr", toLocalArr);
+			// toLocalArr = JSON.stringify(toLocalArr);
+			localStorage.setItem("toLocalArr", JSON.stringify(toLocalArr));
 			// shopNum.textContent = toLocalArr.length;
-			console.log(localStorage.getItem("toLocalArr").length);
-			let newArr = Array.from(localStorage.getItem("toLocalArr"));
-			newArr = newArr.filter((item) => item !== ",");
+			console.log(JSON.parse(localStorage.getItem("toLocalArr")));
+			console.log(
+				JSON.parse(localStorage.getItem("toLocalArr").length) + "length"
+			);
+			let newArr = JSON.parse(localStorage.getItem("toLocalArr"));
+			// newArr = newArr.filter((item) => item !== ",");
 			shopNum.textContent = newArr.length;
 		});
 	});
