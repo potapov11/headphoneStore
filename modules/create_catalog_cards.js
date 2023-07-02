@@ -1,9 +1,12 @@
-import { fromLocal } from "./from_local_storage.js";
+// import { fromLocal } from "./from_local_storage.js";
 import { headphones } from "./headphones_array.js";
-let fromLocalStorageArr = fromLocal();
-console.log(fromLocalStorageArr);
-console.log(typeof fromLocalStorageArr);
+import { setGetLocalArr } from "./setGetLocalArr.js";
+// let fromLocalStorageArr = fromLocal();
+let fromLocalStorageArr = JSON.parse(localStorage.getItem("localArr"));
+// console.log(fromLocalStorageArr);
+// console.log(typeof fromLocalStorageArr);
 const catalogBox = document.querySelector(".main-catalog__box");
+console.log(catalogBox);
 
 function createCatCards() {
 	const createCatalogCards = (array) => {
@@ -21,7 +24,7 @@ function createCatCards() {
 							<p class="main-catalog__title">${headphoneItem.title}</p>
 						</div>
 						<div class = 'main-catalog__card-bottom'>
-							<span class="main-catalog__num">1wefwe</span>							
+							<span class="main-catalog__num">1wefwe</span>
 							<span class="main-catalog__price"> ${headphoneItem.price}</span>
 						</div>
 						<button class="main-catalog__btn-del">Исключить</button>

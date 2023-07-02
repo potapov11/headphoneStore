@@ -1,4 +1,5 @@
 import { createCatCards } from "./modules/create_catalog_cards.js";
+import { setGetLocalArr } from "./modules/setGetLocalArr.js";
 const shopIcon = document.querySelector(".header__shop-icon");
 let totalPrice = document.querySelector(".total__price");
 
@@ -13,11 +14,11 @@ const price = Array.from(prices).reduce((total, item) => {
 totalPrice.textContent = price;
 
 // let toLocalArr = Array.from(localStorage.getItem("toLocalArr"));
-let toLocalArr = JSON.parse(localStorage.getItem("toLocalArr"));
+let toLocalArr = JSON.parse(localStorage.getItem("localArr"));
 // toLocalArr = toLocalArr.filter((item) => item !== ",");
 
 // let newArr = Array.from(localStorage.getItem("toLocalArr"));
-let newArr = JSON.parse(localStorage.getItem("toLocalArr"));
+let newArr = JSON.parse(localStorage.getItem("localArr"));
 if (newArr) {
 	// newArr = newArr.filter((item) => item !== ",");
 	shopIcon.classList.remove("none");
@@ -35,7 +36,8 @@ cards.forEach((cardItem, i) => {
 				toLocalArr.splice(index, 1); // удаляем элемент из массива по индексу
 			}
 			console.log(toLocalArr);
-			localStorage.setItem("toLocalArr", JSON.stringify(toLocalArr));
+			setGetLocalArr(toLocalArr);
+			// localStorage.setItem("toLocalArr", JSON.stringify(toLocalArr));
 			cardItem.remove();
 			shopIcon.textContent--;
 

@@ -1,7 +1,8 @@
 import { createCards } from "./create_cards.js";
-import { getLocalArr } from "./get_local_arr.js";
+// import { getLocalArr } from "./get_local_arr.js";
 
 createCards();
+import { setGetLocalArr } from "./setGetLocalArr.js";
 
 const toLocal = () => {
 	const btns = document.querySelectorAll(".card__btn");
@@ -22,19 +23,11 @@ const toLocal = () => {
 			console.log(toLocalArr);
 			console.log(typeof toLocalArr);
 
-			toLocalArr = setLocalArr(toLocalArr);
+			toLocalArr = setGetLocalArr(toLocalArr);
 			console.log(toLocalArr);
 			console.log(typeof toLocalArr);
 		});
 	});
 };
-
-function setLocalArr(array) {
-	// array = JSON.parse(array);
-	// localStorage.setItem(array);
-	localStorage.setItem("localArr", JSON.stringify(array));
-	array = JSON.parse(localStorage.getItem("localArr"));
-	return array;
-}
 
 export { toLocal };

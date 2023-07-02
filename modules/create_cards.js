@@ -1,5 +1,6 @@
 import { headphones } from "./headphones_array.js";
 const hedphonesBox = document.querySelector(".box");
+console.log(hedphonesBox);
 
 const createCards = () => {
 	headphones.forEach((item, i) => {
