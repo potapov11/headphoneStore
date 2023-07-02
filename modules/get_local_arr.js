@@ -1,4 +1,5 @@
 function getLocalArr(element) {
+	// let newArr = localStorage.getItem("toLocalArr");
 	let newArr = JSON.parse(localStorage.getItem("toLocalArr"));
 	console.log(newArr);
 	if (newArr !== null) {
@@ -10,7 +11,6 @@ function getLocalArr(element) {
 		}
 	}
 	console.log(newArr);
-	console.log(typeof newArr);
 	return newArr;
 }
 

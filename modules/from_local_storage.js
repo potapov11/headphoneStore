@@ -1,5 +1,6 @@
 const fromLocal = () => {
-	const fromLocalStorageArr = localStorage.getItem("toLocalArr");
+	const fromLocalStorageArr = JSON.parse(localStorage.getItem("toLocalArr"));
+	// const fromLocalStorageArr = localStorage.getItem("toLocalArr");
 	console.log(fromLocalStorageArr);
 	return fromLocalStorageArr;
 };

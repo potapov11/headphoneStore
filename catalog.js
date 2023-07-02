@@ -12,12 +12,14 @@ const price = Array.from(prices).reduce((total, item) => {
 
 totalPrice.textContent = price;
 
-let toLocalArr = Array.from(localStorage.getItem("toLocalArr"));
-toLocalArr = toLocalArr.filter((item) => item !== ",");
+// let toLocalArr = Array.from(localStorage.getItem("toLocalArr"));
+let toLocalArr = JSON.parse(localStorage.getItem("toLocalArr"));
+// toLocalArr = toLocalArr.filter((item) => item !== ",");
 
-let newArr = Array.from(localStorage.getItem("toLocalArr"));
+// let newArr = Array.from(localStorage.getItem("toLocalArr"));
+let newArr = JSON.parse(localStorage.getItem("toLocalArr"));
 if (newArr) {
-	newArr = newArr.filter((item) => item !== ",");
+	// newArr = newArr.filter((item) => item !== ",");
 	shopIcon.classList.remove("none");
 	shopIcon.textContent = newArr.length;
 }
@@ -28,12 +30,12 @@ cards.forEach((cardItem, i) => {
 		if (e.target.tagName === "BUTTON") {
 			const dataValue = cardItem.getAttribute("data");
 			console.log(typeof dataValue);
-			const index = toLocalArr.findIndex((item) => item === dataValue);
+			const index = toLocalArr.findIndex((item) => item === Number(dataValue));
 			if (index !== -1) {
 				toLocalArr.splice(index, 1); // удаляем элемент из массива по индексу
 			}
 			console.log(toLocalArr);
-			localStorage.setItem("toLocalArr", toLocalArr);
+			localStorage.setItem("toLocalArr", JSON.stringify(toLocalArr));
 			cardItem.remove();
 			shopIcon.textContent--;
 

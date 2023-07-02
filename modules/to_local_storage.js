@@ -7,11 +7,7 @@ const toLocal = () => {
 	const btns = document.querySelectorAll(".card__btn");
 	const shopNum = document.querySelector(".header__shop-span");
 
-	let toLocalArr = getLocalArr();
-	if (toLocalArr === null) {
-		toLocalArr = [];
-		console.log(toLocalArr);
-	}
+	let toLocalArr = [];
 
 	console.log(toLocalArr);
 	console.log(typeof toLocalArr);
@@ -19,21 +15,26 @@ const toLocal = () => {
 	btns.forEach((item, i) => {
 		item.addEventListener("click", () => {
 			shopNum.classList.remove("none");
+			console.log(toLocalArr);
+			console.log(typeof toLocalArr);
 			toLocalArr.push(i);
 			console.log(toLocalArr.length);
 			console.log(toLocalArr);
-			// toLocalArr = JSON.stringify(toLocalArr);
-			localStorage.setItem("toLocalArr", JSON.stringify(toLocalArr));
-			// shopNum.textContent = toLocalArr.length;
-			console.log(JSON.parse(localStorage.getItem("toLocalArr")));
-			console.log(
-				JSON.parse(localStorage.getItem("toLocalArr").length) + "length"
-			);
-			let newArr = JSON.parse(localStorage.getItem("toLocalArr"));
-			// newArr = newArr.filter((item) => item !== ",");
-			shopNum.textContent = newArr.length;
+			console.log(typeof toLocalArr);
+
+			toLocalArr = setLocalArr(toLocalArr);
+			console.log(toLocalArr);
+			console.log(typeof toLocalArr);
 		});
 	});
 };
+
+function setLocalArr(array) {
+	// array = JSON.parse(array);
+	// localStorage.setItem(array);
+	localStorage.setItem("localArr", JSON.stringify(array));
+	array = JSON.parse(localStorage.getItem("localArr"));
+	return array;
+}
 
 export { toLocal };

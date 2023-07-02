@@ -1,22 +1,17 @@
 import { fromLocal } from "./from_local_storage.js";
 import { headphones } from "./headphones_array.js";
-// let fromLocalStorageArr = Array.from(fromLocal());
 let fromLocalStorageArr = fromLocal();
 console.log(fromLocalStorageArr);
 console.log(typeof fromLocalStorageArr);
-fromLocalStorageArr = fromLocalStorageArr.split(",");
-console.log(fromLocalStorageArr);
-// fromLocalStorageArr = fromLocalStorageArr.filter((item) => item !== ",");
-// console.log(fromLocalStorageArr);
 const catalogBox = document.querySelector(".main-catalog__box");
-console.log(fromLocalStorageArr);
 
 function createCatCards() {
 	const createCatalogCards = (array) => {
+		console.log(array);
 		array.forEach((item, i) => {
-			console.log(item);
 			headphones.forEach((headphoneItem) => {
-				if (+item === headphoneItem.id) {
+				console.log(typeof headphoneItem);
+				if (item === headphoneItem.id) {
 					console.log("равно");
 					const card = document.createElement("div");
 					card.classList.add("main-catalog__card");
