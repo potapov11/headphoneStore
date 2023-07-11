@@ -1,10 +1,5 @@
-// import { fromLocal } from "./from_local_storage.js";
 import { headphones } from "./headphones_array.js";
-import { setGetLocalArr } from "./setGetLocalArr.js";
-// let fromLocalStorageArr = fromLocal();
 let fromLocalStorageArr = JSON.parse(localStorage.getItem("localArr"));
-// console.log(fromLocalStorageArr);
-// console.log(typeof fromLocalStorageArr);
 const catalogBox = document.querySelector(".main-catalog__box");
 console.log(catalogBox);
 
