@@ -19,10 +19,13 @@ function createCatCards() {
 							<p class="main-catalog__title">${headphoneItem.title}</p>
 						</div>
 						<div class = 'main-catalog__card-bottom'>
-							<span class="main-catalog__num">1wefwe</span>
-							<span class="main-catalog__price"> ${headphoneItem.price}</span>
+							<span class="main-catalog__num none">1wefwe</span>
+							<div>
+								<span class="main-catalog__price"> ${headphoneItem.price}</span>
+								<span class="main-catalog__price-icon"> ₽</span>
+							</div>
 						</div>
-						<button class="main-catalog__btn-del">Исключить</button>
+						<button class="main-catalog__btn-del"></button>
 				`;
 					card.setAttribute("data", `${headphoneItem.id}`);
 					catalogBox.appendChild(card);

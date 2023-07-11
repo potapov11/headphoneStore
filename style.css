@@ -11,7 +11,7 @@
 
 .container {
 	width: 1109px;
-	/* margin: 0 auto; */
+	margin: 0 auto;
 	margin-top: 20px;
 }
 
@@ -166,12 +166,11 @@
 
 .main-catalog__box {
 	width: 650px;
-	border: 1px solid red;
 }
 
 .main-catalog__card-bottom {
 	display: flex;
-	justify-content: space-between;
+	justify-content: end;
 	width: 100%;
 }
 
@@ -220,4 +219,20 @@
 
 .total__price {
 	margin-right: 20px;
+}
+
+.main-catalog__btn-del {
+	width: 20px;
+	height: 20px;
+	background: url("images/dlete-icon.svg") no-repeat center;
+	border: none;
+	cursor: pointer;
+}
+
+.main-catalog__title,
+.main-catalog__price,
+.main-catalog__price-icon {
+	color: #1c1c27;
+	font-size: 17px;
+	font-weight: 600;
 }

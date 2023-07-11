@@ -1,4 +1,5 @@
 import { headphones } from "./headphones_array.js";
+
 const hedphonesBox = document.querySelector(".box");
 console.log(hedphonesBox);
 
@@ -17,6 +18,13 @@ const createCards = () => {
     `;
 		card.setAttribute("data", `${i}`);
 		hedphonesBox.appendChild(card);
+
+		// const shopIcon = document.querySelector(".header__shop-img");
+		// console.log(shopIcon);
+		// let fromLocalStorageArr = JSON.parse(localStorage.getItem("localArr"));
+		// console.log(fromLocalStorageArr);
+		// console.log(fromLocalStorageArr.length);
+		// shopIcon.textContent = fromLocalStorageArr.length;
 	});
 };
 
