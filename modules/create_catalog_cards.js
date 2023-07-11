@@ -1,5 +1,6 @@
 import { headphones } from "./headphones_array.js";
 let fromLocalStorageArr = JSON.parse(localStorage.getItem("localArr"));
+console.log(fromLocalStorageArr);
 const catalogBox = document.querySelector(".main-catalog__box");
 console.log(catalogBox);
 

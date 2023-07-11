@@ -7,7 +7,9 @@ const toLocal = () => {
 	const btns = document.querySelectorAll(".card__btn");
 	const shopNum = document.querySelector(".header__shop-span");
 	let fromLocalStorageArr = JSON.parse(localStorage.getItem("localArr"));
-	shopNum.textContent = fromLocalStorageArr.length;
+	if (fromLocalStorageArr) {
+		shopNum.textContent = fromLocalStorageArr.length;
+	}
 	let toLocalArr = [];
 	let shopCount = 0;
 
